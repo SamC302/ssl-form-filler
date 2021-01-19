@@ -2,7 +2,7 @@ import json
 from PDFNetPython3.PDFNetPython import PDFDoc, TextWidget, Field, Rect, Font, SDFDoc
 
 with open('./config.json') as f:
-    config = json.loads(f)
+    config = json.loads(f.read())
 
 doc = PDFDoc(config['template_name'])
 blank_page = doc.GetPage(1)
